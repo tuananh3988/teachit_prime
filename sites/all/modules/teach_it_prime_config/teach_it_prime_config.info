@@ -1,0 +1,12 @@
+name = TEACH IT Prime Config
+description = TEACH IT Prime Config Theme
+package = TEACH IT Prime 1.0
+core = 7.x
+dependencies[] = block
+
+; Information added by drupal.org packaging script on 2013-06-12
+version = "7.x-1.x"
+core = "7.x"
+project = "teach_it_prime"
+datestamp = "1370999542"
+

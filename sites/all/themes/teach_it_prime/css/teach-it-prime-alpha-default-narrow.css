@@ -1,0 +1,10 @@
+.front .big-post-box, .big_post_box {
+  max-height: 506px;
+  width: 66.66%;
+
+}
+
+.front .post-box, .post_box {
+  width: 33.33%;
+  max-height: 253px;
+}

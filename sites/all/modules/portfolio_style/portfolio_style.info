@@ -1,0 +1,10 @@
+name = Portfolio Style
+description = Portfolio Style
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = portfolio_style
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = portfolio_item
+features[image][] = portfolio_view

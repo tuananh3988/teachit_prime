@@ -1,0 +1,98 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ *
+ * This hook declares what blocks are provided by the module.
+ */
+function teach_it_prime_config_block_info() {
+  $blocks['contact_information'] = array(
+    'info' => t('Header contact information'),
+    'status' => TRUE,
+    'region' => 'user_first',  // Not usually provided.
+    //'visibility' => BLOCK_VISIBILITY_LISTED,  // Not usually provided.
+    //'pages' => 'node/*', // Not usually provided here.
+  );
+  
+  $blocks['social_information'] = array(
+    'info' => t('Header social information'),
+    'status' => TRUE,
+    'region' => 'user_second',  // Not usually provided.
+    //'visibility' => BLOCK_VISIBILITY_LISTED,  // Not usually provided.
+    //'pages' => 'node/*', // Not usually provided here.
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ *
+ * This hook generates the contents of the blocks themselves.
+ */
+function teach_it_prime_config_block_view($delta = '') {
+  
+  //The $delta parameter tells us which block is being requested.
+  switch ($delta) {
+    case 'contact_information':
+      //$block['subject'] = t('Title of second block (example_empty)');
+      $block['content'] = block_teach_it_prime_contents($delta);
+      break;
+    case 'social_information':
+      //$block['subject'] = t('Title of second block (example_empty)');
+      $block['content'] = block_teach_it_prime_contents($delta);
+      break;
+  }
+  return $block;
+}
+
+/**
+ * A module-defined block content function.
+ */
+function block_teach_it_prime_contents($which_block) {
+  switch ($which_block) {
+    case 'contact_information':
+      return array('#markup' => '<p class="contact-information"><span>E: ' . theme_get_setting('email', 'teach_it_prime') . '</span>&emsp;<span>T: ' . theme_get_setting('mobile_phone', 'teach_it_prime') . '</span></p>');
+    case 'social_information':
+      return array('#markup' => social_information_html());
+  }
+}
+
+function social_information_html() {
+  $tag = '';
+  $twitter_url = theme_get_setting('twitter_url', 'teach_it_prime');
+  if($twitter_url !== '') {
+    $tag .= '<a href="' . $twitter_url . '" class="twitter" title="' . t('Twitter') . '">' . t('Twitter') . '</a>';
+  }
+  $facebook_url = theme_get_setting('facebook_url', 'teach_it_prime');
+  if($facebook_url !== '') {
+    $tag .= '<a href="' . $facebook_url . '" class="facebook" title="' . t('Facebook') . '">' . t('Facebook') . '</a>';
+  }
+  $google_plus_url = theme_get_setting('google_plus_url', 'teach_it_prime');
+  if($google_plus_url !== '') {
+    $tag .= '<a href="' . $google_plus_url . '" class="gplus" title="' . t('Gplus') . '">' . t('G+') . '</a>';
+  }
+  $linkedin_url = theme_get_setting('linkedin_url', 'teach_it_prime');
+  if($linkedin_url !== '') {
+    $tag .= '<a href="' . $linkedin_url . '" class="linkedin" title="' . t('linkedin') . '">' . t('Linked In') . '</a>';
+  }
+  $flickr_url = theme_get_setting('flickr_url', 'teach_it_prime');
+   if($flickr_url !== '') {
+    $tag .= '<a href="' . $flickr_url . '" class="flickr" title="' . t('Flickr') . '">' . t('Flickr') . '</a>';
+  }
+  $vimeo_url = theme_get_setting('vimeo_url', 'teach_it_prime');
+   if($vimeo_url !== '') {
+    $tag .= '<a href="' . $vimeo_url . '" class="vimeo" title="' . t('Vimeo') . '">' . t('Vimeo') . '</a>';
+  }
+  $dribble = theme_get_setting('dribble', 'teach_it_prime');
+   if($dribble !== '') {
+    $tag .= '<a href="' . $dribble . '" class="dribble" title="' . t('Dribble') . '">' . t('Dribble') . '</a>';
+  }
+  $rss_url = theme_get_setting('rss_url', 'teach_it_prime');
+   if($rss_url !== '') {
+    $tag .= '<a href="' . $rss_url . '" class="rss" title="' . t('Rss') . '">' . t('Rss') . '</a>';
+  }
+  $html = '<p class="pull-right socialIcons">' . $tag . '</p>';
+  
+  return $html;
+}

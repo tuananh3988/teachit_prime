@@ -1,0 +1,124 @@
+
+/* ---------- Color Module Styles ----------- */
+
+/* Main */
+body {
+  background: #ffffff;
+  
+}
+
+
+/* Section Header */
+#section-header{
+  background-color: #035092;
+}
+#section-header{
+  color: #edeeea;
+}
+#section-header a{
+  color: #cbccca;
+}
+
+/* Section Content */
+#section-content {
+  background-color: #ffffff;
+}
+#section-content {
+  color: #3a3b3b;
+}
+#section-content a,
+#section-content a.active {
+  color: #28647f;
+}
+
+
+/* Section Footer */
+#section-footer {
+  background-color: #035091;
+}
+#section-footer {
+  color: #f0ede5;
+}
+#section-footer a,
+#section-footer a.active {
+  color: #cbcbcc;
+}
+
+/* Zone Scheme */
+
+#zone-menu-wrapper {
+    background-color: #fffffd;
+}
+
+#zone-branding-wrapper {
+    background-color: #fffffc;
+}
+
+#zone-preface-wrapper {
+    background-color: #fffffb;
+}
+
+#zone-postscript-wrapper {
+    background-color: #fffffa;
+}
+
+#region-header-first, .block_main_menu_teachit ul.menu ul li {
+    background-color: #fffff9;
+}
+
+#region-header-second {
+    background-color: #fffff8;
+}
+
+#region-user-first {
+    background-color: #fffff7;
+}
+
+#region-user-second {
+    background-color: #fffff6;
+}
+
+.block-main-menu ul.menu ul li a:hover, .block-main-menu ul.menu ul li a.active:hover, .block-main-menu ul.menu li a:hover,  .block-main-menu ul.menu li a.active:hover, .block-main-menu ul.menu li a.active-trail:hover {
+    background-color: #cbcccb;   
+}
+
+//add new 14/2/2014
+#mainNav li.active:before {
+  border-top-color: #171312;
+}
+
+#mainNav li a:hover, #mainNav li a:active {
+	color: #31edba;
+}
+
+.socialIcons a {
+	background-color: #2d3626;
+}
+
+.socialIcons a:hover, .socialIcons a:active {
+	background-color: #32edb6;
+}
+
+#zone-content .singleService .title{
+	color: #3a3b3b;
+}
+
+#zone-content .singleService .title.orange{ 
+	color: #66473e;
+}
+
+#zone-content .singleService .btn-theme-sec {
+	background-color: #34ed6e;
+}
+
+.hover-effect2 .bg .back {
+	background: #d6bfb8;
+}
+
+.node-article .node.odd h3 {
+	background-color: #4157d3;
+}
+
+.node-article .node.even h3 {
+	background-color: #e52525;
+}

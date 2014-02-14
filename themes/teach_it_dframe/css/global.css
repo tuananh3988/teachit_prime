@@ -1,0 +1,202 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+
+
+
+/* Inspiro B Navigation */
+
+body {
+	font-size: 14pt;
+}
+
+
+
+#zone-header {
+  width: 100%;
+}
+
+#zone-preface {
+	width: 100%;
+}
+
+#zone-preface  > .region{
+	width: 33%;
+	margin: 0;
+}
+
+#zone-header #region-header-first{
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom: thick solid #999999;
+}
+
+
+
+/*hide responsive zone-menu-wrapper*/
+
+
+#top-bar .selector,.block-main-menu-wrapper .selector { display: none;}
+
+
+/*nav*/
+
+
+.block_main_menu_teachit ul.menu, .block_main_menu_teachit ul.menu * { margin: 0; padding: 0; list-style: none;}
+
+
+.block_main_menu_teachit ul.menu { line-height: 1.0;}
+
+
+.block_main_menu_teachit ul.menu ul {position: absolute; top: -999em; width: 180px;}
+
+
+.block_main_menu_teachit ul.menu ul li {width: 100%;}
+
+
+.block_main_menu_teachit ul.menu li:hover {visibility: inherit;}
+
+
+.block_main_menu_teachit ul.menu li {float: left; position: relative;}
+
+
+.block_main_menu_teachit ul.menu a { display: block; position: relative;}
+
+
+.block_main_menu_teachit ul.menu li:hover ul, .block_main_menu_teachit ul.menu li.sfHover ul {left: 0px; top: 40px; z-index: 99;}
+
+
+.block_main_menu_teachit ul.menu li:hover li ul, .block_main_menu_teachit ul.menu li.sfHover li ul { top: -999em;}
+
+
+.block_main_menu_teachit ul.menu li li:hover ul, .block_main_menu_teachit ul.menu li li.sfHover ul { left: 180px; top: 1px;}
+
+
+.block_main_menu_teachit ul.menu li:hover ul, .block_main_menu_teachit ul.menu li.sfHover ul { top: 90px;}
+
+
+.block_main_menu_teachit ul.menu li li:hover ul, .block_main_menu_teachit ul.menu li li.sfHover ul, .block_main_menu_teachit ul.menu li li:hover ul, .block_main_menu_teachit ul.menu li li.sfHover ul { left: 200px; top: -10px;}
+
+
+.block_main_menu_teachit ul.menu a { font-size: 1em; height: 90px; line-height: 90px; color: #035091; padding: 0 15px; text-decoration: none;}
+
+
+.block_main_menu_teachit .expanded ul.menu a { font-size: 13px; height: 32px; line-height: 32px; color: #aaa; padding: 0 15px; text-decoration: none;} 
+
+
+.block_main_menu_teachit ul.menu li {  float: left;  position: relative;}
+
+
+.block_main_menu_teachit ul.menu li a:hover {color: #fff;}
+
+
+.block_main_menu_teachit ul.menu li a.active {line-height: 90px; height:90px;}
+
+
+.block_main_menu_teachit ul.menu li.sfHover a, .block_main_menu_teachit a.active, .block_main_menu_teachit a.active:hover, .block_main_menu_teachit li a.active-trail{ background-color: #858585;	color: #fff;}
+
+
+
+.block_main_menu_teachit ul.menu li a.active {background: #035091; color: #fff;}
+.block_main_menu_teachit ul.menu li a.active-trail {	background-color: #035091;color: #fff;}
+
+
+
+
+/*drop-down styles*/
+
+
+.block_main_menu_teachit ul.menu ul { line-height: 80px; height:80px; position: absolute; nowhitespace: afterproperty; top: -999em; width: 200px; z-index: 9999; left: 0; border-radius: 2px;}
+
+
+.block_main_menu_teachit ul.menu ul li {color: #fff;top:0px;}
+
+
+.block_main_menu_teachit ul.menu ul li:first-child { border-top: 0;}
+
+
+.block_main_menu_teachit ul.menu ul li:last-child { border-bottom: 0;}
+
+
+.block_main_menu_teachit ul.menu ul a { display: block;  padding: 10px;  color: #035091;  height: auto;  margin: 0px;  border: 0px;  font-size: 0.929em;  font-weight: normal;  text-shadow: none;}
+
+
+.block_main_menu_teachit ul.menu ul li a:hover {color:#FFF;}
+
+
+.block_main_menu_teachit .block-title {
+    display: none;
+}
+
+#zone-user .block-user-login .form-item {
+    float: left;
+    margin-right: 15px;
+}
+#zone-user .block-user-login .item-list {
+    clear: both;
+}
+
+/* change 17-5 */
+/* 1. height user zone */
+#zone-user .content p {
+    margin-bottom: 0px;
+}
+
+#zone-header p {
+    margin-bottom: 0;
+}
+/* 2. Change selections to make menu get the right display when you move it on the header */    
+.block_logo_techit {
+    min-width: 235px;
+    float: left;
+	padding: 10px 0;
+}
+.block_main_menu_teachit {
+    display: block;
+    float: left;
+}
+
+/* 4. set margin-bottom of tag p  */
+#zone-branding p {
+    margin-bottom: 0px;
+}
+
+/* set height for zone-footer  */
+#zone-footer table td{
+    height: 30px;
+}.block_main_menu_teachit ul.menu li:hover ul, .block_main_menu_teachit ul.menu li.sfHover ul
+
+#zone-footer table{
+    margin-bottom: 0px;
+}
+
+/* set text-decoration for tag a  */
+a, a:link {
+    text-decoration: none!important;
+}
+.block_search_techit {
+	float: right;
+	line-height: 90px;
+}
+
+.block_search_techit input.form-text {
+	border-radius: 7px;
+	width: 195px;
+}
+
+#section-header a.active-trail {
+	color: #fff;
+}
+
+#section-header .block_main_menu_teachit ul.menu a {color: #035091;}
+#section-header .block_main_menu_teachit ul.menu a.active-trail {color: #fff;}
+
+#zone-header .region-inner{
+	width: 100%;
+	
+}
+
+.baner-main {
+	width: 100%;
+}

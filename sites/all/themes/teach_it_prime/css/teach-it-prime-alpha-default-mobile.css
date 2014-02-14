@@ -1,0 +1,10 @@
+.front .big-post-box, .big_post_box {
+  height: auto;
+  width: 100%;
+
+}
+
+.front .post-box, .post_box {
+    height: auto;
+  width: 100%;
+}

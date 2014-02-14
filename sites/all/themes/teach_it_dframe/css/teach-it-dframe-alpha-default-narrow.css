@@ -1,0 +1,38 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+ #zone-header .region-inner{
+	width: 720px;
+	margin: 0 auto;
+}
+
+
+.baner-main {
+	width: 720px;
+}
+
+.block_logo_techit {
+	float: left;
+}
+.block_main_menu_teachit {
+	float: left;
+}
+
+.block_search_techit {
+	float: right;
+}
+
+body {
+	font-size: 12pt;
+}
+
+#region-branding .media_embed .video{
+		width: 500px;
+		height: 287px;
+
+}
+
+#region-branding .mobile_business img {
+	width: 60px;
+}

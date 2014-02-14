@@ -1,0 +1,26 @@
+.singleService.span4 {
+  display: block;
+    width: 31.42857142857143%;
+    min-height: 31px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.857142857142857%;
+    *margin-left: 2.803379416282642%;
+}
+
+.singleService.span4:first-child {
+  margin-left: 0;
+}
+
+.front .big-post-box, .big_post_box {
+  max-height: 506px;
+  width: 50%;
+
+}
+
+.front .post-box, .post_box {
+  width: 25%;
+  max-height: 253px;
+}

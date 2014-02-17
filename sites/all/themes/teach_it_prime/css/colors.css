@@ -82,25 +82,26 @@ body {
     background-color: #cbcccb;   
 }
 
-//add new 14/2/2014
+/* add new 14/2/2014 */
+
 #mainNav li.active:before {
-  border-top-color: #ed5f30;
+  border-top-color: #ed5f30!important;
 }
 
 #mainNav li a:hover, #mainNav li a:active {
-	color: #ed5f31;
+	color: #ed5f31!important;
 }
 
-.socialIcons a {
+.block-teach-it-prime-config .socialIcons a {
 	background-color: #e5e5e5;
 }
 
-.socialIcons a:hover, .socialIcons a:active {
+.block-teach-it-prime-config .socialIcons a:hover, .socialIcons a:active {
 	background-color: #ed5f32;
 }
 
 #zone-content .singleService .title{
-	color: #3a3b3b;
+	color: #3a3b3c;
 }
 
 #zone-content .singleService .title.orange{ 
@@ -108,17 +109,17 @@ body {
 }
 
 #zone-content .singleService .btn-theme-sec {
-	background-color: #ed5f34;
+	background-color: #ed5f34 !important;
 }
 
-.hover-effect2 .bg .back {
+.block-recent-projects .hover-effect2 .featuredWork .bg .back {
 	background: #ed5f35;
 }
 
-.node-article .node.odd h3 {
+.node-article.node.odd h3 {
 	background-color: #e4e4e2;
 }
 
-.node-article .node.even h3 {
+.node-article.node.even h3 {
 	background-color: #f3f3f3;
 }

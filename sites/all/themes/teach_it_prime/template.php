@@ -136,9 +136,26 @@ function images_scheme_form($complete_form, $form_state, $theme) {
             }            
         }
     }
+		
+		//create textfields
+		$textfields = $info['textfields'];
+		foreach($textfields as $k => $v) {
+			$form['customfield'][$k] = $v;
+		}
+		
+		$filepath = drupal_get_path('theme', $theme) . '/css/font-awesome.css';
+		$file_contents = file_get_contents($filepath);
+		$contentLines = explode("\n", $file_contents);
+		foreach($contentLines as $line) {
+			debug($line);
+		}
+		$pattern = '/icon.*:before\s(.*)/';
+		preg_match_all($pattern, $file_contents, $matches);
+		
     
     $a = variable_get('color_' . $theme . '_stylesheets');
     drupal_add_js(drupal_get_path('theme', $theme) . '/js/teachit.js');
+		drupal_add_css(drupal_get_path('theme', $theme) . '/css/font-awesome.css');
     return $form;
 }
 
@@ -184,6 +201,8 @@ function images_scheme_form_submit($form, &$form_state) {
         
     }
     
+		//save custom field data
+		
     $base_file = drupal_basename('bg_styles.css');
     $file_css = $filepath . $base_file;
     $filepath = file_unmanaged_save_data($css, $file_css, FILE_EXISTS_REPLACE);

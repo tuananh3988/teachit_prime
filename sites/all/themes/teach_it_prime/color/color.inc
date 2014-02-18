@@ -300,6 +300,25 @@ $info = array(
     'preview_html' => 'color/preview.html',
     // Base file for image generation.
     'base_image' => 'color/base.png',
+		// textfield
+		'textfields' => array(
+			'hoversinglesevice' => array(
+				'#type' => 'textfield',
+				'#title' => 'Hover Single Sevice',
+				'#size' => 9,
+			),
+			'webdesignicon' => array(
+				'#type' => 'textfield',
+				'#title' => 'Web design icon',
+				'#size' => 9,
+				'#default_value' => '\f0c3',
+				'#attributes' => array(
+					'class' => array('font-awesome-field')
+				)
+			)
+			
+			
+		),
     // image background
     'images' => array(
         'fields' => array(

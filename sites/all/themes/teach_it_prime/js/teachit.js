@@ -1,6 +1,11 @@
 (function ($) {
 
     $(document).ready(function () {
+			$('.font-awesome-field').each(function() {
+				$(this).after('<span class="icon-beaker init"></span></p>');
+				$('.icon-beaker.init:before').css('content', '\f044');
+			});
+			
       $('.image-remove-button').click(function() {
            //update flag remove
            $(this).next().val(1);

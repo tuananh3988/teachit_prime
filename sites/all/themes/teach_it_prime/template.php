@@ -14,7 +14,12 @@
 include_once 'includes/custom_menu.inc';
 
 function teach_it_prime_preprocess_block(&$variables) {
-	debug($variables);
+	if($variables['block']->delta == 6) {
+		$variables['content'] = "My new content";
+		
+		debug($variables['content']);
+	}
+	
 }
 
 function teach_it_prime_process_region(&$vars) {

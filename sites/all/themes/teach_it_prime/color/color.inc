@@ -308,13 +308,38 @@ $info = array(
 				'#size' => 9,
 			),
 			'webdesignicon' => array(
+				'type_field' => 'font_anwsome',
 				'#type' => 'textfield',
 				'#title' => 'Web design icon',
 				'#size' => 9,
-				'#default_value' => '\f0c3',
+				'#default_value' => 'icon-beaker',
+				'#disabled' => TRUE,
 				'#attributes' => array(
 					'class' => array('font-awesome-field')
-				)
+				),
+				
+			),
+			'identitydesignicon' => array(
+				'type_field' => 'font_anwsome',
+				'#type' => 'textfield',
+				'#title' => 'Identity design icon',
+				'#size' => 9,
+				'#default_value' => 'icon-beaker',
+				'#disabled' => TRUE,
+				'#attributes' => array(
+					'class' => array('font-awesome-field')
+				),
+			),
+			'printdesignicon' => array(
+				'type_field' => 'font_anwsome',
+				'#type' => 'textfield',
+				'#title' => 'Print design icon',
+				'#size' => 9,
+				'#default_value' => 'icon-beaker',
+				'#disabled' => TRUE,
+				'#attributes' => array(
+					'class' => array('font-awesome-field')
+				),
 			)
 			
 			

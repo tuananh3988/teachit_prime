@@ -2,8 +2,15 @@
 
     $(document).ready(function () {
 			$('.font-awesome-field').each(function() {
-				$(this).after('<span class="icon-beaker init"></span></p>');
-				$('.icon-beaker.init:before').css('content', '\f044');
+				$(this).after('<span style="font-size:30px; margin-left: 3px;" class="font-awesome-span ' + $(this).val() + '"></span>');
+			});
+			
+			$('.font-anwsome-init').click(function() {
+				$(this).parent().find('.font-anwsome-init').css('border', 'none');
+				$(this).css('border', '1px solid red');
+				$(this).parent().find('.font-awesome-span').attr('class', 'font-awesome-span ' + $(this).attr('value'));
+				$(this).parent().find('.font-awesome-field').val($(this).attr('value'));
+				
 			});
 			
       $('.image-remove-button').click(function() {

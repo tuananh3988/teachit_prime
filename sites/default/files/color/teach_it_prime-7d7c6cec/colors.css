@@ -82,43 +82,44 @@ body {
     background-color: #cbcccb;   
 }
 
-//add new 14/2/2014
+/* add new 14/2/2014 */
+
 #mainNav li.active:before {
-  border-top-color: #171312;
+  border-top-color: #10e74b!important;
 }
 
 #mainNav li a:hover, #mainNav li a:active {
-	color: #31edba;
+	color: #87090e;
 }
 
-.socialIcons a {
-	background-color: #2d3626;
+.block-teach-it-prime-config .socialIcons .socialIcons a {
+	background-color: #e5e5e5;
 }
 
-.socialIcons a:hover, .socialIcons a:active {
-	background-color: #32edb6;
+.block-teach-it-prime-config .socialIcons a:hover, .socialIcons a:active {
+	background-color: #ed5f32;
 }
 
 #zone-content .singleService .title{
-	color: #3a3b3b;
+	color: #3a3b3c;
 }
 
 #zone-content .singleService .title.orange{ 
-	color: #66473e;
+	color: #ed5f33;
 }
 
 #zone-content .singleService .btn-theme-sec {
-	background-color: #34ed6e;
+	background-color: #ed5f34 !important;
 }
 
-.hover-effect2 .bg .back {
-	background: #d6bfb8;
+.featuredWork .hover-effect2 .bg .back {
+	background: #ed5f35;
 }
 
-.node-article .node.odd h3 {
-	background-color: #4157d3;
+.node-article.node.odd h3 {
+	background-color: #e4e4e2;
 }
 
-.node-article .node.even h3 {
-	background-color: #e52525;
+.node-article.node.even h3 {
+	background-color: #f3f3f3;
 }

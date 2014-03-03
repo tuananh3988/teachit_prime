@@ -1,5 +1,15 @@
 <?php
 
+function teach_it_prime_config_menu() {
+	$items['admin/appearance/settings/update_font_anwsome'] = array(
+      'page callback' => 'Update font from file font anwsome css',
+      'page callback' => 'update_font_anwsome',
+			'access arguments' => array('access administration pages'), 
+    );
+	
+    return $items;
+}
+
 /**
  * Implements hook_block_info().
  *
@@ -95,4 +105,32 @@ function social_information_html() {
   $html = '<p class="pull-right socialIcons">' . $tag . '</p>';
   
   return $html;
+}
+
+//get data in file font-awesome.css in template and add new database
+function update_font_anwsome() {
+	$query = db_insert('teachit_font_anwsome')->fields(array('class', 'content'));
+	$filepath = drupal_get_path('theme', 'teach_it_prime') . '/css/font-awesome.css';
+	if (file_exists($filepath)) {
+		$file_contents = file_get_contents($filepath);
+		$contentLines = explode("\n", $file_contents);
+		$fontData = array();
+		foreach($contentLines as $line) {
+			$pattern = '/content: "(.*)"/';
+			preg_match_all($pattern, $line, $matches);
+			if(!empty($matches[0])) {
+				$i++;
+				$e = explode(':before', $line);
+				$fontData['class'] = $e[0];
+				$fontData['content'] = $matches[1][0];
+				$query->values($fontData);
+			}
+		}
+		
+		$query->execute();
+
+		echo "<pre>";
+		var_dump($fontData);
+	}
+	
 }

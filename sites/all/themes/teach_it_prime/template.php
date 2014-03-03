@@ -13,6 +13,10 @@
  */
 include_once 'includes/custom_menu.inc';
 
+function teach_it_prime_preprocess_block(&$variables) {
+	debug($variables);
+}
+
 function teach_it_prime_process_region(&$vars) {
   $custom_main_menu = _custom_main_menu_render_superfish();
   if (!empty($custom_main_menu['content'])) {
@@ -137,23 +141,28 @@ function images_scheme_form($complete_form, $form_state, $theme) {
         }
     }
 		
+		//get all list font anwsome
+		$fontAnwsome = db_select('teachit_font_anwsome', 'c')
+    ->fields('c')
+    ->execute()
+    ->fetchAll();
+		
+		$html = '';
+		foreach($fontAnwsome as $font) {
+			$html .= '<span value="'. substr($font->class, 1) .'" style="font-size:30px; margin-right: 3px;" class="font-anwsome-init ' . substr($font->class, 1) . '"></span>';
+		}
+			
 		//create textfields
 		$textfields = $info['textfields'];
 		foreach($textfields as $k => $v) {
+			if(isset($v['type_field']) && $v['type_field'] == 'font_anwsome') {
+				$v['#prefix'] = '<div class="' . $k . '">';
+				$v['#suffix'] = $html . '</div>';
+				unset($v['type_field']);
+			}
 			$form['customfield'][$k] = $v;
 		}
-		
-		$filepath = drupal_get_path('theme', $theme) . '/css/font-awesome.css';
-		$file_contents = file_get_contents($filepath);
-		$contentLines = explode("\n", $file_contents);
-		foreach($contentLines as $line) {
-			debug($line);
-		}
-		$pattern = '/icon.*:before\s(.*)/';
-		preg_match_all($pattern, $file_contents, $matches);
-		
-    
-    $a = variable_get('color_' . $theme . '_stylesheets');
+	
     drupal_add_js(drupal_get_path('theme', $theme) . '/js/teachit.js');
 		drupal_add_css(drupal_get_path('theme', $theme) . '/css/font-awesome.css');
     return $form;
@@ -161,6 +170,7 @@ function images_scheme_form($complete_form, $form_state, $theme) {
 
 function images_scheme_form_submit($form, &$form_state) {
     $values = $form_state['values'];
+		var_dump($values);die;
     $theme = $form_state['build_info']['args'][0];
     $filepath = 'public://teach_it_prime_images/';
     file_prepare_directory($filepath, FILE_CREATE_DIRECTORY);
